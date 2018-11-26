@@ -1,0 +1,22 @@
+<td-layout>
+  <td-navigation-drawer flex sidenavTitle="Menu">
+    <app-sidenav></app-sidenav>
+  </td-navigation-drawer>
+  <td-layout-nav toolbarTitle="Omar Perozo" style="overflow-y: auto;">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div td-toolbar-content>
+      <button mat-button>
+        Home
+      </button>
+      <button mat-button>
+        Portfolio
+      </button>
+      <button mat-button disabled>
+        Blog
+      </button>
+    </div>
+    <router-outlet></router-outlet>
+  </td-layout-nav>
+</td-layout>
