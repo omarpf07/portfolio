@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SpaComponent } from './spa/spa.component';
+import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [SpaComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    PortfolioRoutingModule
   ]
 })
 export class PortfolioModule { }

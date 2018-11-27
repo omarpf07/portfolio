@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConstantsService } from '../shared/services/constants.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public icons = [];
+
+  constructor(private constants: ConstantsService) { }
 
   ngOnInit() {
+    this.icons = this.constants.icons;
   }
-
 }
