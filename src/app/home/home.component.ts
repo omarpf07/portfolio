@@ -8,11 +8,11 @@ import { ConstantsService } from '../shared/services/constants.service';
 })
 export class HomeComponent implements OnInit {
 
-  public icons = [];
+  public icons = this.constants.icons;
+  public projects = this.constants.projects;
 
   constructor(private constants: ConstantsService) { }
 
   ngOnInit() {
-    this.icons = this.constants.icons;
   }
 }

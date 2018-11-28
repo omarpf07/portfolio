@@ -38,6 +38,24 @@ export class ConstantsService {
     name: 'ts', placeholder: 'TypeScript'
   }];
 
+  public projects = [{
+    name: 'shopcart', placeholder: 'Shop Cart', src: 'https://github.com/omarpf07/shopcart'
+  },
+  {
+    name: 'weather', placeholder: 'Local Weather App', src: 'https://omarpf07.github.io/randomquotes/'
+  },
+  {
+    name: 'technical', placeholder: 'Technical Test', src: ''
+  },
+  {
+    name: 'node', placeholder: 'node.js Projects',
+    src: 'https://github.com/omarpf07?utf8=%E2%9C%93&tab=repositories&q=&type=&language=javascript'
+  }];
+
+  public education = [{
+    name: '', description: '', date: ''
+  }];
+
   constructor() { }
 
 }
