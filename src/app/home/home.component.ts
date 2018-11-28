@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   public icons = this.constants.icons;
   public projects = this.constants.projects;
+  public education = this.constants.education;
 
   constructor(private constants: ConstantsService) { }
 

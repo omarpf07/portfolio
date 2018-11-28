@@ -53,7 +53,15 @@ export class ConstantsService {
   }];
 
   public education = [{
-    name: '', description: '', date: ''
+    name: 'Universidad Dr Rafael Belloso Chacin', description: 'Software Engineering Degree', date: '2015-2019',
+  }, {
+    name: 'Udemy', description: 'Angular: From Zero to Expert creating Angular Applications(Angular 4+)', date: '2018'
+  }, {
+    name: 'Udemy', description: 'node.js: From Zero to Master', date: '2018'
+  }, {
+    name: 'FreeCodeCamp', description: 'Developer Certification', date: '2018'
+  }, {
+    name: 'Cisco Networking Academy', description: 'CCNA Routing and Switching: Networks Introduction', date: '2018'
   }];
 
   constructor() { }

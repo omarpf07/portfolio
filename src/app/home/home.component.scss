@@ -1,6 +1,8 @@
+$bg-prim: #40639B;
+
 .main-section{
-    height: 100vh;
-    background: #40639B;
+    height: 90vh;
+    background: $bg-prim;
 }
 
 div.cardp {
@@ -9,6 +11,8 @@ div.cardp {
         color: rgba(0,0,0,0.75);
     }
 }
+
+
 
 .about-me{
 
@@ -95,8 +99,72 @@ div.cardp {
     div.education-title h1{
         color: rgba(0,0,0,0.75);
     }
+    
+    ul {
+        list-style-type: none;
+    }
+
+    li{
+        padding: 5px;
+    }
+      
+    ul li:before {
+        content: '\2014';
+        position: absolute;
+        margin-left: -20px;
+    }
+
+    li:hover{
+        -webkit-animation: pulsate-fwd 0.5s ease-in-out both;
+        animation: pulsate-fwd 0.5s ease-in-out both;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 }
 
+.contact{
+
+    div.contact-title h1{
+        color: rgba(0,0,0,0.75);
+    }
+
+    .form-control{
+        border-radius: none !important;
+    }
+}
+
+footer{
+    background: $bg-prim;
+}
 
 hr{
     border: 2px solid #5E8BAB;
@@ -110,7 +178,7 @@ hr{
 }
 
 .arrow-down{
-    height:100px;
+    height:10vh;
   }
 
   .arrow-down:before {
