@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   public icons = this.constants.icons;
   public projects = this.constants.projects;
   public education = this.constants.education;
-
+  public send = false;
   constructor(private constants: ConstantsService) { }
 
   ngOnInit() {

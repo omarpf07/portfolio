@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
-    path: 'portfolio',
-    loadChildren: './portfolio/portfolio.module#PortfolioModule'
-  },
-  {
     path: '**',
     component: NotfoundComponent
   },
