@@ -15,7 +15,6 @@ export class ContactUsService {
     const formData = new FormData;
     return this.http.post(`${environment.BASE_URL}/sendMail`, JSON.stringify(formData), this.getHeaders())
       .pipe(map(this.extractData));
-
   }
 
 
