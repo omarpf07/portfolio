@@ -5,6 +5,10 @@ body{
     background: #ececec !important;
 }
 
+html{
+    min-width: min-content;
+}
+
 .pointer{
     cursor: pointer;
 }

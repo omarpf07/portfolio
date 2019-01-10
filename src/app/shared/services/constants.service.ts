@@ -29,14 +29,18 @@ export class ConstantsService {
     name: 'material', placeholder: 'Material'
   },
   {
-    name: 'mongodb', placeholder: 'Mongodb'
+    name: 'mongodb', placeholder: 'MongoDB'
   },
   {
     name: 'node', placeholder: 'node.js'
   },
   {
     name: 'ts', placeholder: 'TypeScript'
-  }];
+  },
+  {
+    name: 'cypress', placeholder: 'Cypress'
+  }
+  ];
 
   public projects = [{
     name: 'shopcart', placeholder: 'Shop Cart', src: 'https://github.com/omarpf07/shopcart'
