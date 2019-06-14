@@ -1,0 +1,30 @@
+h1 {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 13.5vw;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url('../../../../assets/img/bg.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #D15953;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background: #D15953aa;
+}

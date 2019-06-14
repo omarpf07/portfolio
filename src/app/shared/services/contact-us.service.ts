@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
@@ -11,9 +11,13 @@ export class ContactUsService {
   constructor(private http: HttpClient) { }
 
 
-  contactMe(name: string, lastName: string, message: string): Observable<any> {
-    const formData = new FormData;
-    return this.http.post(`${environment.BASE_URL}/sendMail`, JSON.stringify(formData), this.getHeaders())
+  contactMe(data: any): Observable<any> {
+    const payload = new HttpParams();
+    payload.set('name', data.name);
+    payload.set('email', data.email);
+    payload.set('message', data.message);
+
+    return this.http.post(`${environment.BASE_URL}/sendMail`, payload, this.getHeaders())
       .pipe(map(this.extractData));
   }
 
@@ -24,6 +28,6 @@ export class ContactUsService {
   }
 
   private getHeaders() {
-    return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-}
+    return { headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'}) };
+  }
 }

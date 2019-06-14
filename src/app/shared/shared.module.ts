@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 // Dependencies
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { LayoutComponent } from './components/layout/layout.component';
@@ -20,6 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CommonModule,
     RouterModule,
     FlexLayoutModule,
+    HttpClientModule
   ],
   exports: [
     LayoutComponent,

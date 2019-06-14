@@ -1,0 +1,30 @@
+<div fxLayout="row" fxLayoutAlign="start start">
+  <div fxFlex="0 1 50" fxFlex.xs="100%" class="p-5">
+    <div fxLayout="column" fxLayoutAlign="start start">
+      <span class="lead mb-4" fxFlex="0 1 auto">Feel free to Contact me by filling out this
+        simple
+        form:</span>
+      <div class="form" fxFlex="0 1 auto">
+        <form [formGroup]="contactForm" novalidate>
+          <input formControlName="name" type="text"
+            [ngClass]="{'invalid animated wobble': contactForm.get('name').dirty && contactForm.get('name').invalid}"
+            placeholder="Your Name *" />
+          <input title="Provide a valid E-mail address" formControlName="email" type="text" placeholder="Your E-mail *"
+            [ngClass]="{'invalid animated wobble': contactForm.get('email').dirty && contactForm.get('email').invalid}" />
+          <textarea formControlName="message" placeholder="Type a Message here*"
+            [ngClass]="{'invalid animated wobble': contactForm.get('message').dirty && contactForm.get('message').invalid}"
+            rows="4"></textarea>
+          <button type="button" [disabled]="contactForm.invalid" (click)="onSubmit(contactForm)">take off plane
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="0 1 50" fxFlexAlign="center" fxHide.xs="true">
+    <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
+      <img src="assets/img/message.svg" class="h-25 w-25" [ngClass]="{'plane': send === true}">
+      <span *ngIf="send === true" class="font-weight-bold text-capitalize animated tada">Message
+        Sent!</span>
+    </div>
+  </div>
+</div>

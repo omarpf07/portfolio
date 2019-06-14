@@ -2,32 +2,34 @@ $bg-prim: #104B72;
 $accent: #5E8BAB;
 
 
-.main-section{
-    height: 100vh;
-    background: $bg-prim;
-    background-image: url("/assets/img/bg.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 25px;
+.main-section {
+  height: 100vh;
+  background: $bg-prim;
+  background-image: url("/assets/img/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 25px;
 }
 
 div.cardp {
-    box-shadow: 0px 6px 38px -10px rgba(0,0,0,0.75);
-    div.about-me-title h1{
-        color: rgba(0,0,0,0.75);
-    }
+  box-shadow: 0px 6px 38px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+
+  div.about-me-title h1 {
+    color: rgba(0, 0, 0, 0.75);
+  }
 }
 
-.separator{
-    margin-bottom: 100px;
-    height: 10vh;
+.separator {
+  margin-bottom: 100px;
+  height: 10vh;
 }
 
 
 
-.about-me{
+.about-me {
 
-  .div-contImg:hover > .div-change-img{
+  .div-contImg:hover>.div-change-img {
     opacity: 1;
     visibility: visible;
   }
@@ -35,8 +37,8 @@ div.cardp {
   .div-contImg:hover .div-change-img {
     transform: scale(1);
   }
-  
-  .div-change-img{
+
+  .div-change-img {
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
@@ -51,7 +53,7 @@ div.cardp {
     transition: .3s ease;
   }
 
-  .icon-text{
+  .icon-text {
     color: white;
     font-size: 0.8rem;
     position: absolute;
@@ -63,217 +65,148 @@ div.cardp {
   }
 }
 
-.projects{
-    
-    div.port-title h1{
-        color: rgba(0,0,0,0.75);
-    }
+.projects {
 
-    .div-contImg-project:hover > .div-change-img-projects{
-        opacity: 1;
-        visibility: visible;
-      }
-    
-      .div-contImg-project:hover .div-change-img-projects {
-        transform: scale(1);
-      }
+  div.port-title h1 {
+    color: rgba(0, 0, 0, 0.75);
+  }
 
-      .div-change-img-projects{
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        height: 200px;
-        width: 200px;
-        margin-top: -200px;
-        opacity: 1;
-        z-index: 99;
-        background: #ffffff;
-        transform: scale(0);
-        transition: .3s ease;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      }
+  .div-contImg-project:hover>.div-change-img-projects {
+    opacity: 1;
+    visibility: visible;
+  }
 
-      .icon-text-project{
-        color: $accent;
-        font-size: 0.8rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-weight: bold;
-        text-decoration: none;
-      }
+  .div-contImg-project:hover .div-change-img-projects {
+    transform: scale(1);
+  }
+
+  .div-change-img-projects {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-top: -200px;
+    opacity: 1;
+    z-index: 99;
+    background: #ffffff;
+    transform: scale(0);
+    transition: .3s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .icon-text-project {
+    color: $accent;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
-.education{
-    div.education-title h1{
-        color: rgba(0,0,0,0.75);
-    }
-    
-    ul {
-        list-style-type: none;
-    }
+.education {
+  div.education-title h1 {
+    color: rgba(0, 0, 0, 0.75);
+  }
 
-    li{
-        padding: 5px;
-    }
-      
-    ul li:before {
-        content: '\2014';
-        position: absolute;
-        margin-left: -20px;
-    }
+  ul {
+    list-style-type: none;
+  }
 
-    li:hover{
-        -webkit-animation: pulsate-fwd 0.5s ease-in-out both;
-        animation: pulsate-fwd 0.5s ease-in-out both;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+  li {
+    padding: 5px;
+  }
 
-@-webkit-keyframes pulsate-fwd {
+  ul li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+  }
+
+  li:hover {
+    -webkit-animation: pulsate-fwd 0.5s ease-in-out both;
+    animation: pulsate-fwd 0.5s ease-in-out both;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes pulsate-fwd {
     0% {
       -webkit-transform: scale(1);
-              transform: scale(1);
+      transform: scale(1);
     }
+
     50% {
       -webkit-transform: scale(1.1);
-              transform: scale(1.1);
+      transform: scale(1.1);
     }
+
     100% {
       -webkit-transform: scale(1);
-              transform: scale(1);
+      transform: scale(1);
     }
   }
+
   @keyframes pulsate-fwd {
     0% {
       -webkit-transform: scale(1);
-              transform: scale(1);
+      transform: scale(1);
     }
+
     50% {
       -webkit-transform: scale(1.1);
-              transform: scale(1.1);
+      transform: scale(1.1);
     }
+
     100% {
       -webkit-transform: scale(1);
-              transform: scale(1);
+      transform: scale(1);
     }
   }
 }
 
-.contact{
-    background: $accent;
+.contact {
+  background: $accent;
+  border-radius: 5px;
 
-    span{
-        color: #ececec;
-    }
+  span {
+    color: #ececec;
+  }
 
-    div.contact-title h1{
-        color: #ececec;
-    }
+  div.contact-title h1 {
+    color: #ececec;
+  }
 
-    hr.my-0{
-        border: 2px solid #D15953;
-    }
-
-      .form input, textarea {
-        outline: 0;
-        background: #f2f2f2;
-        width: 100%;
-        border: 0;
-        margin: 0 0 15px;
-        padding: 15px;
-        box-sizing: border-box;
-        font-size: 14px;
-      }
-
-      .form textarea{
-        resize: none;
-      }
-
-      .form button {
-        text-transform: uppercase;
-        outline: 0;
-        background: #D15953;
-        border: 0;
-        padding: 15px;
-        color: #FFFFFF;
-        font-size: 14px;
-        -webkit-transition: all 0.3 ease;
-        transition: all 0.3 ease;
-        cursor: pointer;
-      }
-
-      .form button:hover,.form button:active,.form button:focus {
-        background: #D15953aa;
-      }
-
-      .plane{
-          cursor: pointer;
-          -webkit-animation: slide-out-elliptic-top-bck 0.7s ease-in both;
-          animation: slide-out-elliptic-top-bck 0.7s ease-in both;
-      }
-
-
-      @-webkit-keyframes slide-out-elliptic-top-bck {
-        0% {
-          -webkit-transform: translateY(0) rotateX(0) scale(1);
-                  transform: translateY(0) rotateX(0) scale(1);
-          -webkit-transform-origin: 50% 1400px;
-                  transform-origin: 50% 1400px;
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-                  transform: translateY(-600px) rotateX(-30deg) scale(0);
-          -webkit-transform-origin: 50% 100%;
-                  transform-origin: 50% 100%;
-          opacity: 1;
-        }
-      }
-      @keyframes slide-out-elliptic-top-bck {
-        0% {
-          -webkit-transform: translateY(0) rotateX(0) scale(1);
-                  transform: translateY(0) rotateX(0) scale(1);
-          -webkit-transform-origin: 50% 1400px;
-                  transform-origin: 50% 1400px;
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-                  transform: translateY(-600px) rotateX(-30deg) scale(0);
-          -webkit-transform-origin: 50% 100%;
-                  transform-origin: 50% 100%;
-          opacity: 1;
-        }
-      }
+  hr.my-0 {
+    border: 2px solid #D15953;
+  }
 }
 
-.testimonials{
-  
+.testimonials {}
+
+footer {
+  background: $bg-prim;
+
+  span {
+    font-size: 70%;
+  }
 }
 
-footer{
-    background: $bg-prim;
-
-    span {
-      font-size: 70%;
-    }
+hr {
+  border: 2px solid $accent;
+  border-radius: 50px;
+  width: 50%;
 }
 
-hr{
-    border: 2px solid $accent;
-    border-radius: 50px;
-    width: 50%;
+.text-accent {
+  color: $accent;
+  font-weight: bolder;
 }
 
-.text-accent{
-    color: $accent;
-    font-weight: bolder;
+#clouds {
+  fill: $bg-prim;
 }
-
-#clouds{
-    fill: $bg-prim;
-}
-

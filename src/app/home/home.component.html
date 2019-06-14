@@ -1,173 +1,149 @@
 <section class="main-section" fxLayout="row" fxLayoutAlign="center center">
-    <div fxFlex="0 1 auto" class="intro-title">
-        <h1 class="text-white display-3 text-center animated fadeIn">Omar Perozo</h1>
-        <span class="blockquote-footer text-white text-center font-weight-bold animated slideInUp">Full Stack
-            Developer</span>
-    </div>
+  <div fxFlex="0 1 auto" class="intro-title">
+    <h1 class="text-white display-3 text-center animated fadeIn">Omar Perozo</h1>
+    <span class="blockquote-footer text-white text-center font-weight-bold animated slideInUp">Full Stack
+      Developer</span>
+  </div>
 </section>
 <div fxLayout="row" fxLayoutAlign="start center">
-    <div class="cardp mx-auto h-100 bg-white" fxFlex="0 1 1200px">
-        <section class="about-me w-100 p-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
-            <div class="about-me-title" fxFlex="0 1 100" [style.height.px]="80">
-                <h1 class="display-4 my-1">About Me</h1>
-                <hr class="my-0">
+  <div class="cardp mx-auto h-100 bg-white" fxFlex="0 1 1200px">
+    <section class="about-me w-100 p-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div class="about-me-title" fxFlex="0 1 100" [style.height.px]="80">
+        <h1 class="display-4 my-1">About Me</h1>
+        <hr class="my-0">
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start start">
+        <div fxFlex="0 1 50" fxFlex.xs="100%">
+          <p class="lead text-justify mt-3">
+            As confirmed by my portfolio content and code, I combine my knowledge, experience and skills
+            with
+            technology to develop professional and innovative web applications.
+            <br>
+            <br>
+            I follow <b class="text-accent">REST</b> and SOLID software engineering principles. I am also a
+            fan of Agile
+            methodologies.
+            <br>
+            <br>
+            By following the best practices above, I produce “clean code” which is comprehensive, easy to
+            debug
+            and maintain.
+            <br>
+            <br>
+            I have been passionate with development since childhood and enjoy learning about the latest
+            technological advancements.
+            <br>
+            <br>
+            I have worked with the following technologies:
+          </p>
+          <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" fxLayoutGap="25px">
+            <div class="div-contImg" fxFlex="0 1 80px" *ngFor="let item of icons">
+              <img src="assets/img/icons/{{item.name}}.png" class="h-auto w-100 p-2">
+              <div class="div-change-img">
+                <span class="icon-text">{{item.placeholder}}</span>
+              </div>
             </div>
-            <div fxLayout="row" fxLayoutAlign="start start">
-                <div fxFlex="0 1 50" fxFlex.xs="100%">
-                    <p class="lead text-justify mt-3">
-                        As confirmed by my portfolio content and code, I combine my knowledge, experience and skills
-                        with
-                        technology to develop professional and innovative web applications.
-                        <br>
-                        <br>
-                        I follow <b class="text-accent">REST</b> and SOLID software engineering principles. I am also a
-                        fan of Agile
-                        methodologies.
-                        <br>
-                        <br>
-                        By following the best practices above, I produce “clean code” which is comprehensive, easy to
-                        debug
-                        and maintain.
-                        <br>
-                        <br>
-                        I have been passionate with development since childhood and enjoy learning about the latest
-                        technological advancements.
-                        <br>
-                        <br>
-                        I have worked with the following technologies:
-                    </p>
-                    <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" fxLayoutGap="25px">
-                        <div class="div-contImg" fxFlex="0 1 80px" *ngFor="let item of icons">
-                            <img src="assets/img/icons/{{item.name}}.png" class="h-auto w-100 p-2">
-                            <div class="div-change-img">
-                                <span class="icon-text">{{item.placeholder}}</span>
-                            </div>
-                        </div>
-                        <span fxFlex="0 1 auto" fxFlexAlign="center" class="font-weight-bold"> and
-                            counting!</span>
-                    </div>
-                </div>
-                <div fxFlex="0 1 50" fxFlexAlign="center" [fxHide.xs]=true>
-                    <div fxLayout="column" fxLayoutAlign="center center">
-                        <img src="assets/img/rocket.png" class="h-50 w-50">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section class="projects px-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
-            <div class="port-title" fxFlex="0 1 100" [style.height.px]="80">
-                <h1 class="display-4 mb-1">Projects</h1>
-                <hr class="my-0">
-            </div>
-            <div fxFlex="0 1 100" fxFlexAlign="end" class="w-100">
-                <div fxLayout="row" fxLayoutAlign="start start">
-                    <div fxFlex="0 1 50" fxFlexOrder="2" fxFlex.xs="100%">
-                        <div fxLayout="row" fxLayoutAlign="center center">
-                            <p class="lead mt-3" fxFlex="0 1 auto">Here are some projects that I have
-                                worked
-                                on:</p>
-                        </div>
-                        <div fxLayout="row wrap" class="w-100 mb-4" fxLayoutAlign="center center" fxLayoutGap="25px">
-                            <div class="div-contImg-project project mt-2 pointer" fxFlex="0 1 200px" *ngFor="let item of projects">
-                                <img src="assets/img/projects/{{item.name}}.png" class="h-auto w-100 p-2">
-                                <div class="div-change-img-projects">
-                                    <a [href]="item.src" class="icon-text-project" target="_blank">{{item.placeholder}}
-                                        <i class="fas fa-external-link-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div fxFlex="0 1 50" fxFlexAlign="center" fxFlexOrder="1" [fxHide.xs]=true>
-                        <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
-                            <img src="assets/img/coding.png" class="h-50 w-50">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section class="education w-100 px-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
-            <div class="education-title" fxFlex="0 1 100" [style.height.px]="80">
-                <h1 class="display-4 my-1">Education</h1>
-                <hr class="my-0">
-            </div>
-            <div fxFlex="0 1 100" class="mt-5">
-                <ul>
-                    <li *ngFor="let item of education" class="lead">
-                        <span class="text-accent font-weight-bold">{{item.name}}</span>
-                        <p class="mb-0">{{item.description}}</p>
-                        <small>{{item.date}}</small>
-                    </li>
-                </ul>
-                <small class="text-muted">You can have a detailed look in my <a href="https://www.linkedin.com/in/omarperozo/"
-                        target="_blank">LinkedIn
-                        Profile <i class="fas fa-external-link-alt"></i></a></small>
-            </div>
-        </section>
-        <section class="testimonials" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
-            <div class="testimonials-title" fxFlex="0 1 100" [style.height.px]="80">
-                <h1 class="display-4 my-1 pl-5">Testimonials</h1>
-                <hr class="my-0">
-            </div>
-            <div class="w-100 text-center">
-                <span>People I've worked with have said some nice things...</span>
-            </div>
-            <div fxFlex="0 1 100" class="mt-5">
-
-            </div>
-        </section>
-        <div ngsReveal>
-            <svg id="" preserveAspectRatio="xMidYMax meet" class="svg-separator sep4" viewBox="0 0 1600 200" style="display: block;"
-                data-height="200">
-                <polygon class="" style="fill: #5E8BAB;" points="886,86 800,172 714,86 -4,86 -4,204 1604,204 1604,86 "></polygon>
-                <polygon class="" style="opacity: 1;fill: #D15953;" points="800,172 886,86 900,86 800,186 700,86 714,86 "></polygon>
-                <polygon class="" style="opacity: 1;fill: #F9BC68;" points="800,162 876,86 888,86 800,174 712,86 724,86 "></polygon>
-            </svg>
+            <span fxFlex="0 1 auto" fxFlexAlign="center" class="font-weight-bold"> and
+              counting!</span>
+          </div>
         </div>
-        <section class="contact w-100" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
-            <div class="contact-title" fxFlex="0 1 100" [style.height.px]="80">
-                <h1 class="display-4 my-1 pl-5">Get in Touch</h1>
-                <hr class="my-0">
+        <div fxFlex="0 1 50" fxFlexAlign="center" [fxHide.xs]=true>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <img src="assets/img/rocket.png" class="w-50">
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="projects px-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div class="port-title" fxFlex="0 1 100" [style.height.px]="80">
+        <h1 class="display-4 mb-1">Projects</h1>
+        <hr class="my-0">
+      </div>
+      <div fxFlex="0 1 100" fxFlexAlign="end" class="w-100">
+        <div fxLayout="row" fxLayoutAlign="start start">
+          <div fxFlex="0 1 50" fxFlexOrder="2" fxFlex.xs="100%">
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <p class="lead mt-3" fxFlex="0 1 auto">Here are some projects that I have
+                worked
+                on:</p>
             </div>
-            <div fxFlex="0 1 100" class="mt-5">
-                <div fxLayout="row" fxLayoutAlign="start start">
-                    <div fxFlex="0 1 50" fxFlex.xs="100%" class="p-5">
-                        <div fxLayout="column" fxLayoutAlign="start start">
-                            <span class="lead mb-4" fxFlex="0 1 auto">Feel free to Contact me by filling out this
-                                simple
-                                form:</span>
-                            <div class="form" fxFlex="0 1 auto">
-                                <!-- <form> -->
-                                <input type="text" placeholder="name" />
-                                <input type="email" placeholder="email" />
-                                <textarea placeholder="message" rows="4"></textarea>
-                                <button (click)="send = true">take off plane </button>
-                                <!-- </form> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div fxFlex="0 1 50" fxFlexAlign="center" fxHide.xs="true">
-                        <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
-                            <img src="assets/img/message.svg" class="h-25 w-25" [ngClass]="{'plane': send === true}">
-                            <span *ngIf="send === true" class="font-weight-bold text-capitalize animated tada">Message
-                                Sent!</span>
-                        </div>
-                    </div>
+            <div fxLayout="row wrap" class="w-100 mb-4" fxLayoutAlign="center center" fxLayoutGap="25px">
+              <div class="div-contImg-project project mt-2 pointer" fxFlex="0 1 200px" *ngFor="let item of projects">
+                <img src="assets/img/projects/{{item.name}}.png" class="h-auto w-100 p-2">
+                <div class="div-change-img-projects">
+                  <a [href]="item.src" class="icon-text-project" target="_blank">{{item.placeholder}}
+                    <i class="fas fa-external-link-alt"></i></a>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+          <div fxFlex="0 1 50" fxFlexAlign="center" fxFlexOrder="1" [fxHide.xs]=true>
+            <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
+              <img src="assets/img/coding.png" class="w-50">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="education w-100 px-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div class="education-title" fxFlex="0 1 100" [style.height.px]="80">
+        <h1 class="display-4 my-1">Education</h1>
+        <hr class="my-0">
+      </div>
+      <div fxFlex="0 1 100" class="mt-5">
+        <ul>
+          <li *ngFor="let item of education" class="lead">
+            <span class="text-accent font-weight-bold">{{item.name}}</span>
+            <p class="mb-0">{{item.description}}</p>
+            <small>{{item.date}}</small>
+          </li>
+        </ul>
+        <small class="text-muted">You can have a detailed look in my <a href="https://www.linkedin.com/in/omarperozo/"
+            target="_blank">LinkedIn
+            Profile <i class="fas fa-external-link-alt"></i></a></small>
+      </div>
+    </section>
+    <section class="testimonials" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div fxFlex="0 1 100" class="w-100 text-center">
+        <span>People I've worked with have said some nice things...</span>
+      </div>
+      <div fxFlex="0 1 100" class="mt-5">
+
+      </div>
+    </section>
+    <div ngsReveal>
+      <svg id="" preserveAspectRatio="xMidYMax meet" class="svg-separator sep4" viewBox="0 0 1600 200"
+        style="display: block;" data-height="200">
+        <polygon class="" style="fill: #5E8BAB;" points="886,86 800,172 714,86 -4,86 -4,204 1604,204 1604,86 ">
+        </polygon>
+        <polygon class="" style="opacity: 1;fill: #D15953;" points="800,172 886,86 900,86 800,186 700,86 714,86 ">
+        </polygon>
+        <polygon class="" style="opacity: 1;fill: #F9BC68;" points="800,162 876,86 888,86 800,174 712,86 724,86 ">
+        </polygon>
+      </svg>
     </div>
+    <section class="contact w-100" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div class="contact-title" fxFlex="0 1 100" [style.height.px]="80">
+        <h1 class="display-4 my-1 pl-5">Get in Touch</h1>
+        <hr class="my-0">
+      </div>
+      <div fxFlex="0 1 100" class="mt-5">
+        <app-contact-form></app-contact-form>
+      </div>
+    </section>
+  </div>
 </div>
 <svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100"
-    preserveAspectRatio="none">
-    <path d="M-5 100 Q 0 20 5 100 Z
+  preserveAspectRatio="none">
+  <path d="M-5 100 Q 0 20 5 100 Z
              M0 100 Q 5 0 10 100
              M5 100 Q 10 30 15 100
              M10 100 Q 15 10 20 100
@@ -188,24 +164,24 @@
              M85 100 Q 90 50 95 100
              M90 100 Q 95 25 100 100
              M95 100 Q 100 15 105 100 Z">
-    </path>
+  </path>
 </svg>
 <footer fxLayout="row" fxLayoutAlign="start center" class="bg-prim" [style.height.px]="40">
-    <div fxFlex="0 1 auto" class="pl-4">
-        <a href="https://www.facebook.com/omar.a.perozo" class="mr-2" target="_blank">
-            <i class="fab text-white fa-facebook-square"></i>
-        </a>
-        <a href="https://www.instagram.com/omarperezoso" class="mr-2" target="_blank">
-            <i class="fab text-white fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/omarperozo" class="mr-2" target="_blank">
-            <i class="fab text-white fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/omarpf07" class="mr-2" target="_blank">
-            <i class="fab text-white fa-github"></i>
-        </a>
-    </div>
-    <div fxFlex="0 1 auto" fxFlexOffset="auto" class="pr-4">
-        <span class="font-weight-bold text-white">Omar Perozo. All Rights Reserved &copy;</span>
-    </div>
+  <div fxFlex="0 1 auto" class="pl-4">
+    <a href="https://www.facebook.com/omar.a.perozo" class="mr-2" target="_blank">
+      <i class="fab text-white fa-facebook-square"></i>
+    </a>
+    <a href="https://www.instagram.com/omarperezoso" class="mr-2" target="_blank">
+      <i class="fab text-white fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/omarperozo" class="mr-2" target="_blank">
+      <i class="fab text-white fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/omarpf07" class="mr-2" target="_blank">
+      <i class="fab text-white fa-github"></i>
+    </a>
+  </div>
+  <div fxFlex="0 1 auto" fxFlexOffset="auto" class="pr-4">
+    <span class="font-weight-bold text-white">Omar Perozo. All Rights Reserved &copy;</span>
+  </div>
 </footer>
