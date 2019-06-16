@@ -32,15 +32,20 @@
           <re-captcha formControlName="recaptcha"></re-captcha>
           <button type="button" [disabled]="contactForm.invalid" (click)="onSubmit(contactForm)">take off plane
           </button>
+          <p class="invalid mt-2 p-2 text-white" [ngClass]="{'animated fadeOut': !notSent}" *ngIf="notSent">An error has
+            occurred while attempting to send the message,
+            please try again
+            later.</p>
         </form>
       </div>
     </div>
   </div>
   <div fxFlex="0 1 50" fxFlexAlign="center" fxHide.xs="true">
     <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
-      <img src="assets/img/message.svg" class="h-25 w-25" [ngClass]="{'plane': plane === true}">
-
+      <img src="assets/img/message.svg" class="h-25 w-25"
+        [ngClass]="{'plane': plane === true, 'animated shake': notSent}">
     </div>
+
   </div>
 </div>
 

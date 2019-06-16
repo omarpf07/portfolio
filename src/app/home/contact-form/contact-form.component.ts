@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,7 +13,9 @@ import { Subject } from 'rxjs';
 export class ContactFormComponent implements OnInit, OnDestroy {
 
   public sent = false;
+  public notSent: boolean;
   public contactForm: FormGroup;
+  public initialForm: any;
   public destroy$: Subject<boolean> = new Subject<boolean>();
   public plane: boolean;
 
@@ -23,10 +26,10 @@ export class ContactFormComponent implements OnInit, OnDestroy {
       message: ['', Validators.compose([Validators.required, Validators.maxLength(1000)])],
       recaptcha: [null, Validators.required]
     });
+    this.initialForm = this.contactForm.value;
   }
 
   ngOnInit() {
-    console.log(this.contactForm.get('email'));
   }
 
   ngOnDestroy() {
@@ -35,15 +38,16 @@ export class ContactFormComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(form: any) {
-    this.plane = true;
-    setTimeout(() => {
-      this.sent = true;
-    }, 1200);
-    this.contactForm.reset();
     this.contactUsService.contactMe(form.value).pipe(takeUntil(this.destroy$)).subscribe(result => {
-      console.log(result);
+      this.plane = true;
+      setTimeout(() => {
+        this.sent = true;
+        this.contactForm.reset(this.initialForm);
+      }, 1200);
     }, error => {
-      console.log(error);
+      this.notSent = true;
+      this.contactForm.reset(this.initialForm);
+      setTimeout(() => this.notSent = false, 4000);
     });
   }
 
