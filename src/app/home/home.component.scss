@@ -25,8 +25,6 @@ div.cardp {
   height: 10vh;
 }
 
-
-
 .about-me {
 
   .div-contImg:hover>.div-change-img {
@@ -171,14 +169,15 @@ div.cardp {
 
 .contact {
   background: $accent;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   span {
-    color: #ececec;
+    color: #ffffff;
   }
 
   div.contact-title h1 {
-    color: #ececec;
+    color: #ffffff;
   }
 
   hr.my-0 {

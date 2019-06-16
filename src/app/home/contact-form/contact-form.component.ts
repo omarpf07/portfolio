@@ -11,18 +11,22 @@ import { Subject } from 'rxjs';
 })
 export class ContactFormComponent implements OnInit, OnDestroy {
 
+  public sent = false;
   public contactForm: FormGroup;
   public destroy$: Subject<boolean> = new Subject<boolean>();
+  public plane: boolean;
 
-  constructor(private fb: FormBuilder, private contactUsService: ContactUsService) {
+  constructor(private fb: FormBuilder, private contactUsService: ContactUsService, ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required, Validators.pattern(/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/)])],
-      message: ['', Validators.compose([Validators.required, Validators.maxLength(1000)])]
+      message: ['', Validators.compose([Validators.required, Validators.maxLength(1000)])],
+      recaptcha: [null, Validators.required]
     });
   }
 
   ngOnInit() {
+    console.log(this.contactForm.get('email'));
   }
 
   ngOnDestroy() {
@@ -31,11 +35,16 @@ export class ContactFormComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(form: any) {
-    this.contactUsService.contactMe(form.value).pipe(takeUntil(this.destroy$)).subscribe(result => {
-      console.log(result);
-    }, error => {
-      console.log(error);
-    })
+    this.plane = true;
+    setTimeout(() => {
+      this.sent = true;
+    }, 1200);
+    this.contactForm.reset();
+    // this.contactUsService.contactMe(form.value).pipe(takeUntil(this.destroy$)).subscribe(result => {
+    //   console.log(result);
+    // }, error => {
+    //   console.log(error);
+    // });
   }
 
 }

@@ -12,12 +12,8 @@ export class ContactUsService {
 
 
   contactMe(data: any): Observable<any> {
-    const payload = new HttpParams();
-    payload.set('name', data.name);
-    payload.set('email', data.email);
-    payload.set('message', data.message);
-
-    return this.http.post(`${environment.BASE_URL}/sendMail`, payload, this.getHeaders())
+    console.log(data);
+    return this.http.post(`${environment.BASE_URL}/sendMail`, data, this.getHeaders())
       .pipe(map(this.extractData));
   }
 
@@ -28,6 +24,6 @@ export class ContactUsService {
   }
 
   private getHeaders() {
-    return { headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded'}) };
+    return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
   }
 }

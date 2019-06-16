@@ -1,19 +1,35 @@
-<div fxLayout="row" fxLayoutAlign="start start">
+<div fxLayout="row" fxLayoutAlign="start start" *ngIf="!sent" [ngClass]="{'animated fadeInUp': sent === false}"
+  [style.height.px]="600">
   <div fxFlex="0 1 50" fxFlex.xs="100%" class="p-5">
     <div fxLayout="column" fxLayoutAlign="start start">
       <span class="lead mb-4" fxFlex="0 1 auto">Feel free to Contact me by filling out this
         simple
         form:</span>
-      <div class="form" fxFlex="0 1 auto">
+      <div class="form w-100" fxFlex="0 1 auto">
         <form [formGroup]="contactForm" novalidate>
-          <input formControlName="name" type="text"
-            [ngClass]="{'invalid animated wobble': contactForm.get('name').dirty && contactForm.get('name').invalid}"
+          <input formControlName="name" type="text" maxlength="50" mask="A*"
+            [ngClass]="{'invalid': contactForm.get('name').dirty && contactForm.get('name').invalid}"
             placeholder="Your Name *" />
+          <div class="small invalid-text ">
+            <small class="animated zoomIn" *ngIf="contactForm.get('name').dirty && contactForm.get('name').invalid">This
+              field cannot be
+              empty!</small>
+          </div>
           <input title="Provide a valid E-mail address" formControlName="email" type="text" placeholder="Your E-mail *"
-            [ngClass]="{'invalid animated wobble': contactForm.get('email').dirty && contactForm.get('email').invalid}" />
-          <textarea formControlName="message" placeholder="Type a Message here*"
-            [ngClass]="{'invalid animated wobble': contactForm.get('message').dirty && contactForm.get('message').invalid}"
+            [ngClass]="{'invalid': contactForm.get('email').dirty && contactForm.get('email').invalid}" />
+          <div class="small invalid-text">
+            <small class="animated zoomIn"
+              *ngIf="contactForm.get('email').dirty && contactForm.get('email').invalid">Enter a valid E-mail
+              address.</small>
+          </div>
+          <textarea maxlength="1000" formControlName="message" placeholder="Type a Message here*" class="mb-0"
+            [ngClass]="{'invalid': contactForm.get('message').dirty && contactForm.get('message').invalid}"
             rows="4"></textarea>
+          <div class="text-right small">
+            <small [ngClass]="{'invalid-text': contactForm.get('message').invalid}">
+              {{contactForm.get('message').value.length }} / 1000</small>
+          </div>
+          <re-captcha formControlName="recaptcha"></re-captcha>
           <button type="button" [disabled]="contactForm.invalid" (click)="onSubmit(contactForm)">take off plane
           </button>
         </form>
@@ -22,9 +38,16 @@
   </div>
   <div fxFlex="0 1 50" fxFlexAlign="center" fxHide.xs="true">
     <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
-      <img src="assets/img/message.svg" class="h-25 w-25" [ngClass]="{'plane': send === true}">
-      <span *ngIf="send === true" class="font-weight-bold text-capitalize animated tada">Message
-        Sent!</span>
+      <img src="assets/img/message.svg" class="h-25 w-25" [ngClass]="{'plane': plane === true}">
+
     </div>
+  </div>
+</div>
+
+<div *ngIf="sent" fxLayout="row" fxLayoutAlign="center center" [style.height.px]="600">
+  <div fxFlex="1 1 auto" class="text-center animated fadeInUp">
+    <h4>Thanks for the feedback, we will get in touch soon.</h4>
+    <hr>
+    <button (click)="sent = false; plane = false">Send another message</button>
   </div>
 </div>

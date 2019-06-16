@@ -4,7 +4,6 @@ textarea {
   background: #f2f2f2;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
@@ -14,7 +13,24 @@ textarea {
   resize: none;
 }
 
-.form button {
+hr {
+  border: 1.5px solid white;
+  border-radius: 3px;
+  width: 10%;
+}
+
+
+div.small {
+  height: 12px;
+  margin: 0 0 15px;
+}
+
+.invalid-text {
+  color: #a7101f;
+}
+
+button {
+  margin-top: 15px;
   text-transform: uppercase;
   outline: 0;
   background: #D15953;
@@ -29,7 +45,8 @@ textarea {
 
 
 .invalid {
-  background: #ea9292 !important;
+  -webkit-animation: color-change-2x 0.4s linear alternate both;
+  animation: color-change-2x 0.4s linear alternate both;
 }
 
 
@@ -67,6 +84,17 @@ textarea {
     opacity: 1;
   }
 }
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #ffff;
+  }
+
+  100% {
+    background: #ea9292;
+  }
+}
+
 
 @keyframes slide-out-elliptic-top-bck {
   0% {
