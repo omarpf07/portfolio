@@ -40,11 +40,11 @@ export class ContactFormComponent implements OnInit, OnDestroy {
       this.sent = true;
     }, 1200);
     this.contactForm.reset();
-    // this.contactUsService.contactMe(form.value).pipe(takeUntil(this.destroy$)).subscribe(result => {
-    //   console.log(result);
-    // }, error => {
-    //   console.log(error);
-    // });
+    this.contactUsService.contactMe(form.value).pipe(takeUntil(this.destroy$)).subscribe(result => {
+      console.log(result);
+    }, error => {
+      console.log(error);
+    });
   }
 
 }

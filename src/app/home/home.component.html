@@ -98,6 +98,9 @@
         <h1 class="display-4 my-1">Education</h1>
         <hr class="my-0">
       </div>
+      <small class="mt-2 text-muted">You can have a detailed look on my <a
+          href="https://www.linkedin.com/in/omarperozo/" target="_blank">LinkedIn
+          Profile <i class="fas fa-external-link-alt"></i></a></small>
       <div fxFlex="0 1 100" class="mt-5">
         <ul>
           <li *ngFor="let item of education" class="lead">
@@ -106,12 +109,17 @@
             <small>{{item.date}}</small>
           </li>
         </ul>
-        <small class="text-muted">You can have a detailed look in my <a href="https://www.linkedin.com/in/omarperozo/"
-            target="_blank">LinkedIn
-            Profile <i class="fas fa-external-link-alt"></i></a></small>
+
       </div>
     </section>
-    <section class="testimonials" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+    <section class="testimonials w-100 px-5" fxLayout="column" fxLayoutAlign="start start" ngsReveal>
+      <div class="education-title" fxFlex="0 1 100" [style.height.px]="80">
+        <h1 class="display-4 my-1">Testimonials</h1>
+        <hr class="my-0">
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <p class="lead mt-3" fxFlex="0 1 auto">Click on the logos to see what clients say about Omar Perozo</p>
+      </div>
       <div fxFlex="0 1 100" class="w-100 text-center">
         <app-testimonials></app-testimonials>
       </div>
