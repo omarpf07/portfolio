@@ -9,7 +9,6 @@ import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recap
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { NgxMaskModule } from 'ngx-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 
@@ -24,7 +23,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     RecaptchaFormsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot(),
   ], providers: [{
     provide: RECAPTCHA_SETTINGS,
     useValue: {

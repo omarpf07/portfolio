@@ -8,13 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 // Components
 import { LayoutComponent } from './components/layout/layout.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-
 @NgModule({
   declarations: [
     LayoutComponent,
     NotfoundComponent,
-    NavbarComponent
   ],
   imports: [
     CommonModule,
