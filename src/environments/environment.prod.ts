@@ -1,4 +1,4 @@
-const BASE_URL = 'https://us-central1-portfolio-1960b.cloudfunctions.net';
+const BASE_URL = 'https://rocky-thicket-78521.herokuapp.com';
 
 export const environment = {
   production: true,

@@ -7,7 +7,7 @@
         form:</span>
       <div class="form w-100" fxFlex="0 1 auto">
         <form [formGroup]="contactForm" novalidate>
-          <input formControlName="name" type="text" maxlength="50" mask="A*"
+          <input formControlName="name" type="text" maxlength="50"
             [ngClass]="{'invalid': contactForm.get('name').dirty && contactForm.get('name').invalid}"
             placeholder="Your Name *" />
           <div class="small invalid-text ">
@@ -15,7 +15,7 @@
               field cannot be
               empty!</small>
           </div>
-          <input title="Provide a valid E-mail address" formControlName="email" type="text" placeholder="Your E-mail *"
+          <input title="Provide a valid E-mail address" formControlName="email" type="email" placeholder="Your E-mail *"
             [ngClass]="{'invalid': contactForm.get('email').dirty && contactForm.get('email').invalid}" />
           <div class="small invalid-text">
             <small class="animated zoomIn"
