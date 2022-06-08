@@ -4,9 +4,9 @@ import { HomeRoutingModule } from './home-routing.module';
 
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
-import { NgsRevealModule } from 'ngx-scrollreveal';
+// import { NgsRevealModule } from 'ngx-scrollreveal';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
-import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import { RecaptchaFormsModule } from 'ng-recaptcha';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,9 +16,9 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
   declarations: [HomeComponent, ContactFormComponent, TestimonialsComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,
     SharedModule,
-    NgsRevealModule,
+    HomeRoutingModule,
+    // NgsRevealModule,
     RecaptchaModule,
     RecaptchaFormsModule,
     FormsModule,

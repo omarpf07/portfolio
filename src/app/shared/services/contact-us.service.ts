@@ -13,15 +13,9 @@ export class ContactUsService {
 
   contactMe(data: any): Observable<any> {
     console.log(data);
-    return this.http.post(`${environment.BASE_URL}/sendMail`, data, this.getHeaders())
-      .pipe(map(this.extractData));
+    return this.http.post(`${environment.BASE_URL}/sendMail`, data, this.getHeaders());
   }
 
-
-  private extractData(res) {
-    const body = res;
-    return body;
-  }
 
   private getHeaders() {
     return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
