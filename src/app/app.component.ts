@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   template: `<app-layout></app-layout>`,
 })
 export class AppComponent {
-  title = 'portfolio';
 }
